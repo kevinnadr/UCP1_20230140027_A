@@ -1,0 +1,155 @@
+/* === RESET DAN DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f0f7ff, #ffffff);
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(to right, #003366, #0055a5);
+  padding: 20px 0;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: border-bottom 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* === HERO SECTION === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 80px 10%;
+  background: linear-gradient(to right, #e0f2ff, #ffffff);
+}
+
+.hero-text {
+  max-width: 600px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-text h2 {
+  font-size: 42px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #005dc1;
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  width: 400px;
+  max-width: 100%;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* === HIGHLIGHT SECTION === */
+.highlight {
+  background: #f1faff;
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Jika ingin halaman diisi penuh, gunakan flex grow */
+main {
+  flex: 1;
+}
+
+.highlight h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #002b5c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  box-shadow: inset 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: auto;
+}
+
+/* === ANIMASI === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 30px;
+  }
+}

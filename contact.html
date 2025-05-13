@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak - SMARTPEOPLE</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">SMARTPEOPLE</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Fitur</a>
+        <a href="contact.html" class="active">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <div id="popup" class="popup hidden">🎉 Pesan Anda telah terkirim!</div>
+      <h2>Hubungi Kami</h2>
+      <form id="contactForm">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="minat">Minat Belajar:</label>
+        <input type="text" id="minat" name="minat" required />
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SMARTPEOPLE</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const popup = document.getElementById("popup");
+      popup.classList.remove("hidden");
+
+      setTimeout(() => {
+        popup.classList.add("hidden");
+      }, 4000);
+
+      this.reset();
+    });
+  </script>
+</body>
+</html>
